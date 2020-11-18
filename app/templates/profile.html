@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="col-md-9 bag">
+    <div class="row">
+        <div class="col-md-11">
+            <div class="jumbotron">
+                <h1 class="display-4">{{user.username}}</h1>
+                <p class="lead">{{user.full_name}}</p>
+                <hr class="my-4">
+                <p>Phone: {{user.phone}}</p>
+                <p>City: {{user.city}}</p>
+                <p class="lead">
+                    About me: {{user.about_me}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+{% endblock %}

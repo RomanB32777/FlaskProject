@@ -1,0 +1,6 @@
+flask
+flask_login
+cloudipsp
+flask_wtf
+wtforms
+flask_mongoengine

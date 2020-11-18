@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="case" novalidate>
+    <h1>Login Page</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+      <div class="form-group">
+        <label for="exampleInputEmail1">Your Login</label>
+       
+        <small id="emailHelp" class="form-text text-muted">We'll never share your login with anyone else.</small>
+        <p>
+            
+            {{ form.username(size=32) }}<br>
+            {{ form.password() }}<br>
+            {{ form.years }}<br>
+            {% for cat, error in get_flashed_messages(with_categories = true) %}
+            <span class="{{ cat }}">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p> {{ form.submit() }} </p>
+      </div>
+      
+    </form>
+    
+</div>
+{% endblock %}
